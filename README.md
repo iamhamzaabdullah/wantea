@@ -1,23 +1,31 @@
-# Wantea — GitHub Pages site
+# Wantea
 
-A static, bilingual (English / Indonesian) Wantea brand site inspired by the editorial/art-direction spirit of irreverent tea projects, while using Wantea's own mascot, Jakarta context, red/cream palette and Bait ul Hikam narrative.
+**Wantea** is an independent tea project created by **Adam Solaris**.
 
-## Files
-- `index.html` — home
-- `menu.html` — tea/menu
-- `story.html` — brand story
-- `experiences.html` — Tea Talks / Bait ul Hikam
-- `contact.html` — contact
-- `assets/style.css` — responsive visual system
-- `assets/main.js` — language toggle, navigation, reveal animations
-- `assets/wantea-logo.png` — supplied Wantea logo
+A contemporary Jakarta tea experience built around carefully crafted oolong, thoughtful design, curiosity, and conversation.
 
-## Deploy to GitHub Pages
-1. Create a GitHub repository, e.g. `wantea`.
-2. Upload all files in this folder to the repository root.
-3. In GitHub: Settings → Pages → Deploy from a branch.
-4. Select `main` and `/root`, then Save.
-5. GitHub will publish the static site.
+## The First Pour
 
-## Before launch
-Replace placeholder menu copy, store information, social links and contact form handling with confirmed Wantea details.
+**Carefully crafted oolong tea**, initially offered in three sizes:
+
+- **250 ml**
+- **500 ml**
+- **1 liter**
+
+Wantea is intentionally focused: one tea, carefully made, with room for the idea to grow.
+
+## The World of Wantea
+
+Wantea brings together tea, culture, curiosity, and contemporary Indonesian visual language.
+
+Its world is connected to **Bait ul Hikam** — an upcoming interactive learning experience with tea.
+
+> **From Bait ul Hikam, where new discourse takes its direction.**
+
+## Created by
+
+**Adam Solaris**
+
+Jakarta, Indonesia.
+
+© 2026 Wantea. All rights reserved.
