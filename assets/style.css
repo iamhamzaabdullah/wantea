@@ -173,3 +173,93 @@ textarea{min-height:140px;resize:vertical}
  .size-grid .menu-item{padding:20px;min-height:380px}
  .footer{padding:15vw 6vw 25px}
 }
+
+
+/* Wantea menu v2 — focused product system */
+.menu-hero {
+  min-height: 78vh;
+}
+.menu-hero > p {
+  max-width: 680px;
+}
+.section-heading-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 40px;
+  margin-bottom: 34px;
+}
+.section-heading-row .small-copy {
+  max-width: 430px;
+  margin: 0;
+}
+.oolong-story .cream-outline {
+  color: transparent;
+  -webkit-text-stroke: 1.5px var(--cream);
+}
+.karak-coming {
+  background: var(--cream);
+}
+.karak-card {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1.1fr .9fr;
+  gap: clamp(30px, 6vw, 90px);
+  padding: clamp(28px, 6vw, 80px);
+  border: 1.5px solid var(--ink);
+  background: var(--pink);
+  overflow: hidden;
+}
+.karak-mark {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: clamp(4rem, 10vw, 10rem);
+  font-weight: 800;
+  line-height: .78;
+  letter-spacing: -.08em;
+  transform: rotate(-3deg);
+}
+.karak-mark span {
+  font-family: "DM Mono", monospace;
+  font-size: .23em;
+  letter-spacing: .04em;
+}
+.karak-copy {
+  align-self: center;
+  max-width: 560px;
+}
+.karak-stamp {
+  position: absolute;
+  right: 4%;
+  bottom: 5%;
+  border: 1.5px solid var(--ink);
+  border-radius: 50%;
+  width: 112px;
+  height: 112px;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  font: 700 .7rem/1.05 "DM Mono", monospace;
+  transform: rotate(8deg);
+}
+@media (max-width: 760px) {
+  .section-heading-row {
+    display: block;
+  }
+  .section-heading-row .small-copy {
+    margin-top: 18px;
+  }
+  .karak-card {
+    grid-template-columns: 1fr;
+    gap: 42px;
+    padding: 28px 22px 120px;
+  }
+  .karak-mark {
+    font-size: clamp(4.2rem, 20vw, 7rem);
+  }
+  .karak-stamp {
+    width: 88px;
+    height: 88px;
+    right: 20px;
+    bottom: 20px;
+  }
+}
