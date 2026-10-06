@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex">
+<meta http-equiv="refresh" content="0; url=./">
+<script>
+(function () {
+  var p = window.location.pathname;
+  var m = p.match(/\/([^/]+)\.html$/);
+  if (m) {
+    var base = p.slice(0, p.length - (m[1].length + 5));
+    window.location.replace(base + m[1] + "/");
+  }
+})();
+</script>
+<title>Wantea</title>
+</head>
+<body></body>
+</html>
