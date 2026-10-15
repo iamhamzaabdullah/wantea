@@ -1,25 +1,42 @@
-/* Translucent surfaces retain solid fallbacks and readable text contrast. */
-body{background:radial-gradient(ellipse at 85% 15%,#efbac16b,transparent 45%),radial-gradient(ellipse at 10% 48%,#c9d9c066,transparent 40%),#fff6e2}
-.nav,.pour-visual,.question-panel,.chapter-list article,.new-art,.size-buttons button,.topic-buttons button{border:1px solid #ffffffb3;box-shadow:inset 0 1px 0 #ffffffe6,inset 0 -1px 0 #ffffff38,0 14px 45px #49301d12}
-.nav{background:#fff8e9df;box-shadow:inset 0 1px 1px white,0 8px 30px #30241d16;border-color:#ffffffc9}
-.navlinks a{transition:background .2s,box-shadow .2s}.navlinks a:hover{background:#30241de6}
-.new-art{background:radial-gradient(ellipse at 15% 5%,#ffffffa6,transparent 65%),linear-gradient(140deg,#f4c7d1ab,#eed2bb66);border-radius:48% 48% 30px 30px}
-.pour-visual{border-radius:32px;background:radial-gradient(circle at 80% 25%,#ffffffcc,transparent 55%),linear-gradient(135deg,#f0d3b394,#eee4c980)}
-.question-space{background:linear-gradient(120deg,#eedbd5a6,#f8eedcc9)}
-.question-panel{background:#fffaf0c9;border-radius:28px;padding:32px;position:relative;overflow:hidden}
-.chapter-list article{padding:28px;border-radius:24px;background:#fffaf0b8}
-.size-buttons button,.topic-buttons button{background:#fffaf0d9;border-color:#fffaf0;color:#30241d;transition:background .2s,box-shadow .2s,transform .2s}
-.size-buttons button:hover,.topic-buttons button:hover{background:#ffffff;box-shadow:inset 0 1px 0 white,0 5px 15px #49301d1c;transform:translateY(-2px)}
-.size-buttons button[aria-pressed=true],.topic-buttons button[aria-pressed=true]{background:#49362feb;color:#fff6e2;border-color:#49362f;box-shadow:inset 0 1px 0 #ffffff40,0 6px 18px #30241d25}
-.cta{background:linear-gradient(145deg,#b74438,#9e2926);border:1px solid #ffffff66;box-shadow:inset 0 1px 0 #ffffff66,0 8px 22px #a52c2425}
-.cta.alt{background:#fffaf0d9;color:#30241d;border-color:#ffffff}
-.wisdom{background:radial-gradient(ellipse at 80% 20%,#55796580,transparent 60%),linear-gradient(130deg,#233d33,#304c40)}
-.wisdom-bottom{background:#ffffff0d;border:1px solid #ffffff2b;border-radius:24px;padding:30px;box-shadow:inset 0 1px 0 #ffffff20}
-.footer{background:#fff6e2e6}
-@supports ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){
- .nav{background:#fff8e9b8;-webkit-backdrop-filter:blur(22px) saturate(150%);backdrop-filter:blur(22px) saturate(150%)}
- .pour-visual,.question-panel,.chapter-list article,.new-art{-webkit-backdrop-filter:blur(16px) saturate(120%);backdrop-filter:blur(16px) saturate(120%)}
- .question-panel{background:#fffaf09e}.chapter-list article{background:#fffaf080}
+/* Restrained finishing layer: solid content, subtle frost only on navigation. */
+body{background:var(--cream)}
+.nav{background:#fff6e2f2;border:1px solid #30241d40;box-shadow:0 5px 18px #30241d0c;-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px)}
+.navlinks a,.menu-btn{min-height:44px;display:inline-flex;align-items:center;justify-content:center}
+.menu-btn{display:none}
+.new-art{background:#efbac1;border:1px solid #ad302b30;border-radius:48% 48% 12px 12px;box-shadow:none}
+.pour-visual{background:#eadfc6;border:1px solid #30241d26;border-radius:20px}
+.chapter-list article{background:transparent;border:0;border-top:1px solid #30241d66;border-radius:0;box-shadow:none;padding:26px 0 0}
+.question-space{background:#f1dfda}
+.question-panel{background:#fffaf0;border:1px solid #30241d30;border-radius:20px;padding:32px;box-shadow:none}
+.size-buttons button,.topic-buttons button{background:#fffaf0;color:#30241d;border:1px solid #77665a;min-height:44px;transition:background .18s,color .18s}
+.size-buttons button:hover,.topic-buttons button:hover{background:#ebddc7}
+.size-buttons button[aria-pressed=true],.topic-buttons button[aria-pressed=true]{background:#30241d;color:#fff6e2;border-color:#30241d}
+.cta{background:#ad302b;color:#fffaf0;border:1px solid #ad302b;box-shadow:none;min-height:48px}
+.cta:hover{background:#81231f;color:#fffaf0;transform:none}
+.cta.alt{background:#fffaf0;color:#30241d;border-color:#77665a}
+.cta.alt:hover{background:#30241d;color:#fffaf0}
+.wisdom{background:#263f36;color:#fff6e2}
+.wisdom-bottom{background:transparent;border:0;padding:0;box-shadow:none}
+.footer{background:#ad302b;color:#fffaf0}
+.footer-links a:hover,.footer-links a:focus-visible{background:#fffaf0;color:#81231f}
+.footer-arabic{color:#fff6e2}
+.footer-note{line-height:1.6}
+.navlinks a[aria-current=page]{background:#30241d;color:#fff6e2}
+.hero-layout>div,.intro-grid>div,.wisdom-bottom>div{min-width:0}
+.story-opening p{line-height:1.75}
+.question-panel #question{margin-top:20px}
+.karak-mark{line-height:1}
+@media(min-width:801px){.navlinks{display:flex}.menu-btn{display:none}}
+@media(max-width:800px){
+ .menu-btn{display:inline-flex}.navlinks{display:none}
+ .nav.open{background:#fff6e2;-webkit-backdrop-filter:none;backdrop-filter:none}
+ .nav.open .navlinks{background:#fff6e2;border:1px solid #30241d55;border-radius:20px;padding:12px;box-shadow:0 14px 30px #30241d26;max-height:calc(100dvh - 110px);overflow-y:auto}
+ .nav.open .navlinks a{background:#fff6e2;color:#30241d;text-align:left;justify-content:flex-start}
+ .nav.open .navlinks a[aria-current=page],.nav.open .navlinks a:hover{background:#30241d;color:#fff6e2}
+ .question-panel{padding:24px}.question-panel #question{font-size:clamp(2rem,7vw,3rem)}
+ .footer{padding:60px 6vw 25px}.footer-links{gap:10px}.footer-links a{min-height:44px;display:inline-flex;align-items:center}
+ .hero-caption{line-height:1.6}.new-art{min-height:330px}.hero-foot{line-height:1.5}
 }
-@media(max-width:800px){.nav.open .navlinks{background:#fff8e9f5;border:1px solid #ffffff;border-radius:24px;box-shadow:inset 0 1px 0 white,0 18px 40px #30241d26}.question-panel,.wisdom-bottom{padding:24px}.chapter-list article{padding:24px}.question-panel #question{font-size:clamp(2rem,7vw,3rem)}}
-@media(prefers-reduced-transparency:reduce){.nav,.question-panel,.chapter-list article,.pour-visual{background:#fff6e2;backdrop-filter:none;-webkit-backdrop-filter:none}.new-art{background:#efbac1}}
+@media(prefers-reduced-transparency:reduce){.nav{background:#fff6e2;backdrop-filter:none;-webkit-backdrop-filter:none}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+.footer-logo{line-height:.88}.menu-btn:hover{background:#30241d;color:#fff6e2}.new-art .art-note{color:#69221d}
