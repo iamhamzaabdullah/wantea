@@ -263,3 +263,51 @@ textarea{min-height:140px;resize:vertical}
     bottom: 20px;
   }
 }
+
+
+/* Wantea Menu — product-card breathing room
+   Scoped to the Menu page's size cards only. */
+.size-grid .menu-item {
+  padding: clamp(26px, 2.4vw, 36px);
+}
+.size-grid .menu-item .product-art {
+  margin-top: 18px;
+  margin-bottom: 0;
+}
+.size-grid .menu-item > div:last-child {
+  padding-top: clamp(28px, 3vw, 44px);
+}
+.size-grid .menu-item h2 {
+  margin-bottom: 18px;
+}
+.size-grid .menu-item .note {
+  margin-bottom: 0;
+}
+
+@media (max-width: 850px) {
+  .size-grid .menu-item {
+    padding: 26px;
+  }
+  .size-grid .menu-item .product-art {
+    margin-top: 16px;
+  }
+  .size-grid .menu-item > div:last-child {
+    padding-top: 34px;
+  }
+}
+
+@media (max-width: 520px) {
+  .size-grid .menu-item {
+    padding: 26px 24px 32px;
+    min-height: 420px;
+  }
+  .size-grid .menu-item .product-art {
+    margin-top: 18px;
+  }
+  .size-grid .menu-item > div:last-child {
+    padding-top: 38px;
+  }
+  .size-grid .menu-item h2 {
+    margin-bottom: 18px;
+  }
+}

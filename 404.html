@@ -2,19 +2,18 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="noindex">
-<meta http-equiv="refresh" content="0; url=./">
+<title>Page not found — Wantea</title>
 <script>
+// Redirect only known legacy pages; preserve GitHub project prefixes and fragments.
 (function () {
-  var p = window.location.pathname;
-  var m = p.match(/\/([^/]+)\.html$/);
-  if (m) {
-    var base = p.slice(0, p.length - (m[1].length + 5));
-    window.location.replace(base + m[1] + "/");
-  }
+  var path = location.pathname;
+  var match = path.match(/^(.*\/)(menu|story|experiences|contact)\.html$/);
+  if (match) location.replace(match[1] + match[2] + '/' + location.search + location.hash);
 })();
 </script>
-<title>Wantea</title>
+<style>body{margin:0;min-height:100vh;display:grid;place-items:center;background:#fff6e2;color:#30241d;font:18px/1.6 system-ui,sans-serif}main{padding:32px;max-width:550px}h1{font:normal 64px/1 Georgia,serif}a{color:#9e2926;text-underline-offset:5px}</style>
 </head>
-<body></body>
+<body><main><p>WAN TEA?</p><h1>A little detour.</h1><p>This page couldn’t be found. Head back to Wantea for tea and a fresh conversation.</p><a id="home" href="/">Back to Wantea →</a></main><script>if(location.hostname==='iamhamzaabdullah.github.io')document.getElementById('home').href='/wantea/';</script></body>
 </html>
